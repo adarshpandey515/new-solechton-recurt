@@ -1303,47 +1303,64 @@ body {
   border-radius: 10px;
 }
 
-.text-container {
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Add some gap between image and text */
+  height: 60vh;
+  max-width: 80vw; /* Adjust the width to allow more space for image and text */
+  margin: 0 auto; /* Center the container horizontally */
+}
 
-  flex: 1;
+.image-container {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  justify-content: flex-end; /* Align image to the right */
+}
+
+.text-container {
+  flex: 1; /* Take up remaining space */
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: flex-start; /* Align text to the left */
   justify-content: center;
-  height: 60vh;
-  max-width: 20vw;
 }
 
 .container1:hover .image-container {
-  transform: scale(1.2); /* Enlarge the image by 20% on hover */
+  transform: translateX(10px); /* Move the image container slightly to the right on hover */
 }
 
 .container1:hover .text-container {
-  color: #1482db; /* Change text color to orange on hover */
-  transform: translateY(-10px); /* Move the text container slightly upward on hover */
+  color: #1482db; /* Change text color to blue on hover */
+  transform: translateX(-10px); /* Move the text container slightly to the left on hover */
 }
+
 .button-container {
   display: flex;
   justify-content: space-evenly;
-  background: linear-gradient(to right, violet, pink, lightgreen);
+  background: whitesmoke;
   padding: 20px;
   border-radius: 10px;
 }
 
 .button {
-  background-color: transparent;
-  border: none;
-  padding: 10px;
-  border-radius: 50%; /* Make the buttons round */
+  background: linear-gradient(to right, violet, pink, lightgreen);
+  
+  
+  border-radius: 20px; /* Make the buttons round */
   cursor: pointer;
   display: flex;
+
   justify-content: center;
-  align-items: center;
+  align-items:center ;
+  margin-right: 70px;
+  border:#e40ab5 4px solid;
 }
 
 .button img {
   max-width: 50%;
-  max-height: 50%;
+  max-height: 25%;
 }
 
 .button-label {
