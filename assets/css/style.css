@@ -1291,14 +1291,15 @@ body {
 
 .image-container {
 
-  flex: 1.4;
+  flex: 1.6;
   overflow: hidden;
+  
   transition: transform 0.3s;
-  max-width: 70vw;
+  max-width:100 vw;
 }
 
 .image-container img {
-  width: 70%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
 }
@@ -1308,18 +1309,20 @@ body {
   align-items: center;
   justify-content: center;
   gap: 20px; /* Add some gap between image and text */
-  height: 60vh;
-  max-width: 80vw; /* Adjust the width to allow more space for image and text */
+
   margin: 0 auto; /* Center the container horizontally */
 }
 
 .image-container {
-  flex: 1; /* Take up remaining space */
+
   display: flex;
   justify-content: flex-end; /* Align image to the right */
+  margin: 20px;
+  border-radius: 50% 20% / 10% 40%;
 }
 
 .text-container {
+  color: whitesmoke;
   flex: 1; /* Take up remaining space */
   display: flex;
   flex-direction: column;
@@ -1328,12 +1331,13 @@ body {
 }
 
 .container1:hover .image-container {
-  transform: translateX(10px); /* Move the image container slightly to the right on hover */
+  transform: translateX(10px); 
+  transform-box: 10px;/* Move the image container slightly to the right on hover */
 }
 
 .container1:hover .text-container {
-  color: #1482db; /* Change text color to blue on hover */
-  transform: translateX(-10px); /* Move the text container slightly to the left on hover */
+  color: #b33c0c; /* Change text color to blue on hover */
+  transform: translateX(+10px); /* Move the text container slightly to the left on hover */
 }
 
 .button-container {
@@ -1342,11 +1346,12 @@ body {
   background: whitesmoke;
   padding: 20px;
   border-radius: 10px;
+  
 }
 
 .button {
-  background: linear-gradient(to right, violet, pink, lightgreen);
-  
+  background:  yellowgreen;
+
   
   border-radius: 20px; /* Make the buttons round */
   cursor: pointer;
@@ -1355,14 +1360,101 @@ body {
   justify-content: center;
   align-items:center ;
   margin-right: 70px;
-  border:#e40ab5 4px solid;
+  border:#3ebec7 4px solid;
+  border-radius: 10% / 50%;
+
 }
 
 .button img {
   max-width: 50%;
   max-height: 25%;
+  
 }
 
 .button-label {
   margin-top: 5px;
+}
+.first{
+  flex:1.6;
+  align-items: start;
+}
+/* .second{
+  flex:1.6;
+  align-items: end;
+} */
+@media (max-width: 768px) {
+  .container1 {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .first{
+    order: 1;
+  }
+  
+  .image-container {
+    flex: 1;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .image-container img {
+    border-radius: 0;
+  }
+  
+  .text-container {
+    align-items: center;
+
+    text-align: center;
+  }
+  
+  .container1:hover .image-container {
+    transform: translateX(0);
+    transform-box: 0;
+  }
+  
+  .container1:hover .text-container {
+    color: whitesmoke; /* Reset color on hover */
+    transform: translateX(0);
+  }
+  
+  .button-container {
+    padding: 10px;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .button {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  .button-label {
+    margin-top: 2px;
+  }
+ 
+  
+  /* Additional adjustments if needed */
+  .it-color {
+    font-size: 36px;
+    color: rgb(240, 14, 14);
+    margin: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s forwards;
+    margin-top: 30px;
+  margin-bottom: 10px;
+  }
+.enlarge-box{
+  max-width: 50%;
+margin-left: 25%;
+  align-items: center;
+  justify-content: center;
+}
+.about-banner{
+  justify-content: center;
+  align-items: center;
+}
+
+
 }
